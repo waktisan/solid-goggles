@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Personal Webpage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            font-family: 'Roboto', sans-serif;
+            color: #f5f5dc;
+            overflow-x: hidden;
+        }
+        body::before {
+            content: "";
+            background: url('https://images.unsplash.com/photo-1524230659092-07f99a75c013?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center center/cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            filter: brightness(0.5);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-align: center;
+            padding: 2em;
+            box-sizing: border-box;
+        }
+        header {
+            margin-bottom: 2em;
+        }
+        header h1 {
+            font-size: 3em;
+            margin: 0;
+            padding: 0.5em 1em;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            animation: fadeIn 2s;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2em;
+            background-color: rgba(0, 0, 0, 0.7);
+            border-radius: 10px;
+            padding: 0.5em 1em;
+        }
+        nav a {
+            color: #f5f5dc;
+            margin: 0 1em;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ddd;
+        }
+        section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 1.5em;
+            border-radius: 10px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        h2 {
+            border-bottom: 2px solid #f5f5dc;
+            padding-bottom: 0.5em;
+            margin-bottom: 1em;
+        }
+        .projects, .videos, .social-media {
+            display: flex;
+            flex-direction: column;
+            gap: 1em;
+            width: 100%;
+            max-width: 800px;
+        }
+        .project, .video, .social-media-item {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 1em;
+            border-radius: 10px;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        .project:hover, .video:hover, .social-media-item:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+            transform: translateY(-10px);
+        }
+        .social-media-item a {
+            color: #f5f5dc;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WAKTISAN</h1>
+    </header>
+    <nav>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#projects">Programming Projects</a>
+        <a href="#videos">Drumming Videos</a>
+        <a href="#social-media">Social Media</a>
+    </nav>
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            Welcome to my personal webpage! I am a self-taught programmer and a passionate drummer. Here, you can find my projects, videos, and ways to connect with me.
+        </p>
+        <p style="text-align: center; max-width: 800px; margin: 0 auto;">
+            I am an experienced freelancer specializing in Excel automation and VBA scripting, with expertise in streamlining data management, creating advanced macros, and integrating Outlook for automated email workflows. Proficient in web development using HTML and Java, I build responsive websites and web applications. I am also skilled in Power BI, creating insightful dashboards for data visualization and reporting. With a strong foundation in problem-solving and process optimization, I help clients boost productivity through automation and data-driven solutions. Additionally, I have experience in content creation, managing a YouTube channel for drumming, and producing engaging video content.
+        </p>
+    </section>
+    <section id="projects">
+        <h2>Programming Projects</h2>
+        <div class="projects">
+            <div class="project">
+                <h3>Personal Portfolio Website</h3>
+                <p>This is a responsive personal portfolio website designed to showcase my skills, projects, and drumming videos. It features smooth scrolling, interactive elements, and a modern, minimalist design.</p>
+                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+                <p><strong>Role:</strong> Sole Developer</p>
+                <p><strong>Challenges and Solutions:</strong> Ensuring the site is fully responsive across different devices was challenging. I used media queries and flexible grid layouts to achieve this.</p>
+                <p><a href="https://github.com/yourusername/portfolio-website" target="_blank">View on GitHub</a></p>
+            </div>
+            <div class="project">
+                <h3>Task Manager App</h3>
+                <p>A web application for managing tasks and to-dos. Users can create, edit, delete, and categorize tasks. The app also features a search function to quickly find tasks.</p>
+                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, Node.js, Express.js, MongoDB</p>
+                <p><strong>Role:</strong> Full Stack Developer</p>
+                <p><strong>Challenges and Solutions:</strong> Integrating MongoDB for efficient data storage and retrieval required learning about database schemas and query optimization.</p>
+                <p><a href="https://github.com/yourusername/task-manager-app" target="_blank">View on GitHub</a></p>
+            </div>
+            <div class="project">
+                <h3>Interactive Drum Lessons Web App</h3>
+                <p>A web application providing interactive drum lessons with video tutorials, practice schedules, and progress tracking.</p>
+                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, React, Node.js, MongoDB</p>
+                <p><strong>Role:</strong> Full Stack Developer</p>
+                <p><strong>Challenges and Solutions:</strong> Implementing real-time progress tracking and interactive elements for a better user experience.</p>
+                <p><a href="https://github.com/yourusername/drum-lessons-app" target="_blank">View on GitHub</a></p>
+            </div>
+            <div class="project">
+                <h3>Reefer Cargo Management System</h3>
+                <p>A web-based system to manage and monitor reefer cargo operations, including temperature tracking and maintenance scheduling.</p>
+                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript, Python, Django, PostgreSQL</p>
+                <p><strong>Role:</strong> Backend Developer</p>
+                <p><strong>Challenges and Solutions:</strong> Ensuring real-time data updates and handling large datasets efficiently.</p>
+                <p><a href="https://github.com/yourusername/reefer-cargo-management" target="_blank">View on GitHub</a></p>
+            </div>
+            <div class="project">
+                <h3>Advanced Excel Integration Tool</h3>
+                <p>A tool to integrate Excel with Outlook for automated reporting and data analysis, using macros and VBA.</p>
+                <p><strong>Technologies Used:</strong> Excel VBA, Outlook API</p>
+                <p><strong>Role:</strong> Developer</p>
+                <p><strong>Challenges and Solutions:</strong> Creating efficient macros to handle large datasets and seamless integration with Outlook.</p>
+                <p><a href="https://github.com/yourusername/excel-outlook-integration" target="_blank">View on GitHub</a></p>
+            </div>
+        </div>
+    </section>
+    <section id="videos">
+        <h2>Drumming Videos</h2>
+        <div class="videos">
+            <div class="video">
+                <h3>Drum Cover Video 1</h3>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/9vgXLyVZJEc" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="video">
+                <h3>Drum Cover Video 2</h3>
+                <iframe width="100%" height="315" src="https://www.youtube.com/embed/KNPsb4GV7CQ" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+    <section id="social-media">
+        <h2>Connect with Me</h2>
+        <div class="social-media">
+            <div class="social-media-item">
+                <a href="https://www.youtube.com/channel/UC-WztsobgGRV6xw3bgqdmYw">YouTube</a>
+            </div>
+            <div class="social-media-item">
+                <a href="https://www.linkedin.com/in/muhammad-lufti-bin-misri/">LinkedIn</a>
+            </div>
+            <div class="social-media-item">
+                <a href="https://www.instagram.com/luftimisri/">Instagram</a>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
